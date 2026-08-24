@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "weights": {
+    "organicAcquisition": 0.22,
+    "buyerValue": 0.20,
+    "monetization": 0.16,
+    "defensibility": 0.13,
+    "buildCost": 0.10,
+    "moderationRisk": 0.09,
+    "sixMonthRevenuePlausibility": 0.10
+  },
+  "rubric": "Each criterion is scored 1-10. Higher is better. Build cost and moderation risk are reverse-scored: 10 means cheap/simple to build or low-risk to moderate. Scores are hypotheses, not demand measurements.",
+  "concepts": {
+    "agent-wall": [9, 9, 8, 7, 7, 6, 8],
+    "launch-grid": [7, 7, 7, 5, 7, 5, 6],
+    "open-source-wall": [8, 8, 7, 8, 5, 5, 7],
+    "time-capsule": [4, 5, 6, 6, 6, 8, 4],
+    "local-mosaic": [8, 7, 6, 6, 3, 3, 5],
+    "creator-atlas": [7, 6, 5, 4, 5, 3, 5],
+    "skills-map": [7, 7, 6, 6, 4, 4, 6],
+    "climate-pledge-grid": [6, 7, 7, 8, 3, 2, 5],
+    "internet-museum": [6, 5, 5, 7, 4, 7, 4],
+    "future-work-wall": [8, 7, 6, 6, 5, 4, 6]
+  }
+}
