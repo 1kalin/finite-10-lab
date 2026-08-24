@@ -1,0 +1,10 @@
+{
+  "name": "digital-real-estate-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node generate.mjs",
+    "test": "node test.mjs"
+  }
+}
+
