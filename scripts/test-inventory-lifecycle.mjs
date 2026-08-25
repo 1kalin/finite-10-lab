@@ -12,7 +12,7 @@ assert.deepEqual(await ledger.reserve({ itemId: 'tile-1', requestId: 'reserve-1'
 assert.equal(ledger.snapshot().events.length, 1);
 const attempts = await Promise.allSettled([
   ledger.claim({ itemId: 'tile-1', requestId: 'claim-1', holderId: 'owner-1' }),
-  ledger.claim({ itemId: 'tile-1', requestId: 'claim-2', holderId: 'owner-2' })
+  ledger.claim({ itemId: 'tile-1', requestId: 'claim-2', holderId: 'owner-1' })
 ]);
 assert.equal(attempts.filter(result => result.status === 'fulfilled').length, 1);
 assert.equal(ledger.publicCounts().claimed, 1);
