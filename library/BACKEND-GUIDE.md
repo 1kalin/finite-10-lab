@@ -14,3 +14,5 @@ Agent Wall currently uses a build-time JSON catalog rather than a runtime databa
 ## Validation
 
 Validation fails closed on missing identity, owner, destination, categories, lifecycle fields, verification, or edit history. Public destinations must use HTTPS. Add adversarial cases to `scripts/test-listing-model.mjs` whenever the contract changes.
+
+Verification evidence is always an array of `{ type, url, submittedAt }` entries with HTTPS URLs and valid timestamps. `unverified` records have no evidence or review timestamp; `evidence_submitted` has evidence but no review timestamp; `verified` and `expired` require both evidence and `checkedAt`. Public disclosure copy is required because rendering and trust labels consume it directly.
