@@ -10,15 +10,20 @@ const valid = {
   evidence: [{ type: 'owner-attestation', url: 'https://example.com/evidence', submittedAt: '2026-08-25T01:00:00Z' }]
 };
 
-for (const url of ['javascript:alert(1)', 'http://example.com', 'https://localhost/x', 'https://127.0.0.1/x', 'https://10.0.0.1/x', 'https://user:pass@example.com']) {
+for (const url of ['javascript:alert(1)', 'http://example.com', 'https://localhost/x', 'https://127.0.0.1/x', 'https://10.0.0.1/x', 'https://[::]/x', 'https://[::1]/x', 'https://[fe80::1]/x', 'https://[fc00::1]/x', 'https://[fd00::1]/x', 'https://[::ffff:127.0.0.1]/x', 'https://user:pass@example.com']) {
   assert.throws(() => validateSubmission({ ...valid, destinationUrl: url }), /URL|https|private host/);
+}
+for (const url of ['https://[::1]/proof', 'https://[fe80::1]/proof', 'https://[::ffff:10.0.0.1]/proof']) {
+  assert.throws(() => validateSubmission({ ...valid, evidence: [{ ...valid.evidence[0], url }] }), /private host/);
 }
 assert.throws(() => validateSubmission({ ...valid, evidence: [] }), /evidence/);
 assert.throws(() => validateSubmission({ ...valid, categories: [''] }), /categories/);
 
 const submitted = workflow.submit(valid, 'owner-1');
 assert.equal(submitted.status, 'pending_review');
+assert.throws(() => workflow.submit(valid, 'attacker'), /ownerId must match/);
 assert.throws(() => workflow.edit(submitted.id, { summary: 'Hijacked' }, 'attacker'), /only the owner/);
+assert.throws(() => workflow.edit(submitted.id, { ownerId: 'new-owner' }, 'owner-1'), /ownerId cannot be changed/);
 assert.throws(() => workflow.reject(submitted.id, 'mod-1', 'because_i_said_so', 'No'), /reason is invalid/);
 const rejected = workflow.reject(submitted.id, 'mod-1', 'insufficient_evidence', 'Add independent evidence.');
 assert.equal(rejected.status, 'rejected');
