@@ -11,6 +11,7 @@
 - Spacing follows an 8px rhythm. Core tokens are exposed as `--space-1` through `--space-7`.
 - Surfaces use `--surface`, `--surface-raised`, `--line`, and three radii: 12px, 20px, and 28px.
 - Desktop content is capped at 1200px. The flagship changes from two columns to one at 880px and receives tighter mobile spacing below 600px.
+- At 390px, every grid track uses `minmax(0, 1fr)`, supporting copy may wrap at any word boundary, and the stats collapse to one column. Do not mask layout defects with horizontal overflow clipping.
 - Focus rings must be visible. Information and inventory state must never rely on color alone.
 
 ## Components and states

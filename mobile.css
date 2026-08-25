@@ -1,8 +1,3 @@
-html,
-body {
-  overflow-x: hidden;
-}
-
 @media (max-width: 600px) {
   .site-nav {
     gap: 10px;
@@ -10,16 +5,32 @@ body {
   }
 
   .status-pill {
-    max-width: 156px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    max-width: 164px;
+    white-space: normal;
+    text-align: right;
   }
 
   .hero-copy,
   .hero-section,
-  .inventory-section {
+  .inventory-section,
+  .stats-grid,
+  .canvas-panel,
+  .selection-panel {
     min-width: 0;
+  }
+
+  .hero-section,
+  .inventory-section,
+  .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lede,
+  .trust-note,
+  .stat-card,
+  .selection-panel,
+  .btn {
+    overflow-wrap: anywhere;
   }
 
   h1 {
@@ -30,6 +41,6 @@ body {
   }
 
   .shell {
-    width: calc(100vw - 24px);
+    width: min(1200px, calc(100% - 24px));
   }
 }
