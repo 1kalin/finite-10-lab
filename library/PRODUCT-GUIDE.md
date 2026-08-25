@@ -28,6 +28,7 @@ Qualified reservation intent, share rate, repeat visits, outbound clicks, modera
 - Listings carry stable identity, owner, destination, categories, moderation status, visibility, verification, timestamps, and append-only edit history.
 - Only `published` + `public` records render. Commercial, complimentary, and demo disclosures remain explicit.
 - Placement inventory is separate from listing identity. Its source states are available, held, claimed, expired, and removed; public counts derive from those records rather than simulated scarcity.
+- New listings enter `pending_review` with evidence and cannot become approved without an explicit moderator action. Rejections carry a structured reason plus corrective detail; owner edits re-enter review. Abuse reports are distinct records, and moderator takedowns preserve their reason and complete audit history.
 
 ## Information architecture
 
