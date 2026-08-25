@@ -27,6 +27,7 @@ Qualified reservation intent, share rate, repeat visits, outbound clicks, modera
 - `lib/listing-model.mjs` validates records fail-closed before the production build renders them.
 - Listings carry stable identity, owner, destination, categories, moderation status, visibility, verification, timestamps, and append-only edit history.
 - Only `published` + `public` records render. Commercial, complimentary, and demo disclosures remain explicit.
+- Placement inventory is separate from listing identity. Its source states are available, held, claimed, expired, and removed; public counts derive from those records rather than simulated scarcity.
 
 ## Information architecture
 

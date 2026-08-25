@@ -10,6 +10,8 @@ Agent Wall currently uses a build-time JSON catalog rather than a runtime databa
 - Listing IDs and slugs are unique and stable. Status and visibility are separate, explicit fields.
 - Published records must be public. Other lifecycle or visibility states never enter the public build.
 - Edit history is append-only evidence. Verification is not a synonym for payment, placement, or endorsement.
+- Placement inventory uses `available`, `held`, `claimed`, `expired`, and `removed` states through `InventoryLedger`; callers supply unique request IDs so retries are idempotent.
+- Inventory events are append-only. Public counts are computed from the current source snapshot after expired holds are materialized, never from seeded UI counters.
 
 ## Validation
 

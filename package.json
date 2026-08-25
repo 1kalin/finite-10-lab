@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node generate.mjs",
     "build:flagship": "node scripts/build-flagship.mjs",
-    "test": "node test.mjs && node scripts/test-listing-model.mjs && npm run build:flagship && node scripts/test-responsive.mjs",
+    "test": "node test.mjs && node scripts/test-listing-model.mjs && node scripts/test-inventory-lifecycle.mjs && npm run build:flagship && node scripts/test-responsive.mjs",
     "scorecard": "node scripts/scorecard.mjs"
   }
 }
