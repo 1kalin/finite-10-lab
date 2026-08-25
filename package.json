@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node generate.mjs",
+    "build:flagship": "node scripts/build-flagship.mjs",
     "test": "node test.mjs",
     "scorecard": "node scripts/scorecard.mjs"
   }

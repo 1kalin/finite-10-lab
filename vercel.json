@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build:flagship",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

@@ -4,6 +4,10 @@
 
 Finite, visible internet inventory with a clear buyer benefit and transparent availability.
 
+The selected public flagship is branded **Agent Wall**. Production builds use
+`npm run build:flagship`, which emits only the selected flagship and its runtime assets
+to `dist/`; the ten-concept lab remains source-only and is not part of the public artifact.
+
 ## Prototype semantics
 
 - Reservations are simulations and never imply ownership or payment.
