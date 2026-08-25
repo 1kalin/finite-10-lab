@@ -16,6 +16,7 @@ to `dist/`; the ten-concept lab remains source-only and is not part of the publi
 - The prototype has one primary CTA: preview a placement. It must never imply that previewing creates a hold, reservation, ownership right, or obligation.
 - The proposed `$100` figure is a one-time launch price, not an active offer. Live pricing and checkout remain disabled pending explicit approval.
 - Commercial placement does not confer verification, editorial endorsement, usage evidence, or ranking.
+- The consolidated policy page is the public source for terms, privacy, listing standards, refunds/cancellation, moderation/takedown, and contact status. During prototype mode it must state that no submission, contract, reservation, or payment is created and that no support inbox is represented as active.
 
 ## Success measures
 

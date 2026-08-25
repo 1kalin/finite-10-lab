@@ -23,6 +23,7 @@
 - `.status-pill` always discloses prototype/payment state. Never imply live demand, verified ownership, or real reservations.
 - `.legend` labels available, illustrative demo-claimed, and selected inventory states.
 - `.feedback` provides non-blocking inline success/error messaging; native `alert()`, `confirm()`, and `prompt()` are prohibited.
+- `.site-footer` links the complete trust layer from every purchase-facing page. `.policy-page` and `.policy-section` provide the narrow, readable long-form policy layout.
 - Empty selection is explicit (`No tile selected`); loading uses `.loading-state`; errors should reuse `.feedback` with clear recovery copy.
 
 ## Interaction

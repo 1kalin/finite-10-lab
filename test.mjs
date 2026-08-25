@@ -8,3 +8,10 @@ const flagship=fs.readFileSync(new URL('./agent-wall.html',import.meta.url),'utf
 for(const required of ['Preview a placement','Proposed one-time price','no pay-to-rank claims','no personal data requested','creates no hold'])if(!flagship.includes(required))throw new Error(`flagship positioning missing ${required}`);
 if((flagship.match(/btn primary/g)||[]).length!==2)throw new Error('flagship must keep one primary journey expressed at hero and selected-tile action');
 console.log('Agent Wall positioning and trust checks passed');
+
+const policies=fs.readFileSync(new URL('./policies.html',import.meta.url),'utf8');
+const flagshipBuild=fs.readFileSync(new URL('./scripts/build-flagship.mjs',import.meta.url),'utf8');
+for(const id of ['terms','privacy','standards','refunds','moderation','contact'])if(!policies.includes(`id="${id}"`))throw new Error(`policy layer missing ${id}`);
+for(const link of ['policies.html#terms','policies.html#privacy','policies.html#standards','policies.html#refunds','policies.html#moderation','policies.html#contact'])if(!flagshipBuild.includes(link))throw new Error(`flagship build missing policy link ${link}`);
+for(const claim of ['submissions, reservations, accounts, checkout, and payments are disabled','does not create a contract','No payment can currently be made'])if(!policies.includes(claim))throw new Error(`policy disclosure missing ${claim}`);
+console.log('Agent Wall policy and disclosure checks passed');
