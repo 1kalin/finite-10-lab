@@ -1,0 +1,35 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .status-pill {
+    max-width: 156px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .hero-copy,
+  .hero-section,
+  .inventory-section {
+    min-width: 0;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: .92;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .shell {
+    width: calc(100vw - 24px);
+  }
+}
