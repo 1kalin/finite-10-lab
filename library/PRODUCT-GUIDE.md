@@ -17,3 +17,11 @@ to `dist/`; the ten-concept lab remains source-only and is not part of the publi
 ## Success measures
 
 Qualified reservation intent, share rate, repeat visits, outbound clicks, moderation burden, and willingness to pay.
+
+## Information architecture
+
+- The canonical public hierarchy is home → directory/editorial collection → agent profile.
+- Primary taxonomy dimensions are use case and verified integration; capability is a filter, not an automatic SEO page.
+- The full route, navigation, canonical, crawl, and page-eligibility contract lives in `analysis/INFORMATION-ARCHITECTURE.md`.
+- Public pages exist to help a buyer find and evaluate an agent. Commercial placement never creates a separate indexable identity or changes evidence thresholds.
+- Use-case and integration pages become indexable only with at least five relevant agents, at least 300 words of unique analysis, explicit methodology, and current evidence. Sub-threshold and arbitrary filtered pages remain out of the index.
