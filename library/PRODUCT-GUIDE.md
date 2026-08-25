@@ -13,6 +13,9 @@ to `dist/`; the ten-concept lab remains source-only and is not part of the publi
 - Reservations are simulations and never imply ownership or payment.
 - A tile is a licensed placement right, not real property or an investment.
 - Live versions require moderation, refund/takedown rules, link safety, and payment-webhook authority.
+- The prototype has one primary CTA: preview a placement. It must never imply that previewing creates a hold, reservation, ownership right, or obligation.
+- The proposed `$100` figure is a one-time launch price, not an active offer. Live pricing and checkout remain disabled pending explicit approval.
+- Commercial placement does not confer verification, editorial endorsement, usage evidence, or ranking.
 
 ## Success measures
 

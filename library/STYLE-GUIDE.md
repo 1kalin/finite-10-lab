@@ -19,6 +19,7 @@
 - `.site-nav`, `.hero-section`, and `.inventory-section` are the named page regions.
 - `.btn` is the shared control; stack `.primary` for the accent variant and use native `disabled` state.
 - `.stat-card`, `.canvas-panel`, and `.selection-panel` are the core surfaces.
+- `.value-section` and `.trust-section` use evidence-led cards to explain buyer value, objections, pricing, and privacy without competing calls to action.
 - `.status-pill` always discloses prototype/payment state. Never imply live demand, verified ownership, or real reservations.
 - `.legend` labels available, illustrative demo-claimed, and selected inventory states.
 - `.feedback` provides non-blocking inline success/error messaging; native `alert()`, `confirm()`, and `prompt()` are prohibited.
