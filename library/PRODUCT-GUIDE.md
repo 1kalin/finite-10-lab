@@ -21,6 +21,13 @@ to `dist/`; the ten-concept lab remains source-only and is not part of the publi
 
 Qualified reservation intent, share rate, repeat visits, outbound clicks, moderation burden, and willingness to pay.
 
+## Listing data contract
+
+- `data/listings.v1.json` is the versioned fixture contract; schema changes increment `schemaVersion` and require a migration strategy.
+- `lib/listing-model.mjs` validates records fail-closed before the production build renders them.
+- Listings carry stable identity, owner, destination, categories, moderation status, visibility, verification, timestamps, and append-only edit history.
+- Only `published` + `public` records render. Commercial, complimentary, and demo disclosures remain explicit.
+
 ## Information architecture
 
 - The canonical public hierarchy is home → directory/editorial collection → agent profile.

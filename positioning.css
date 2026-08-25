@@ -9,3 +9,4 @@
 .trust-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media(max-width:880px){.value-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.trust-list{grid-template-columns:1fr}}
+.directory-section{padding:72px 0}.profile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}.profile-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.profile-meta,.profile-categories{display:flex;flex-wrap:wrap;gap:8px}.profile-meta span,.profile-categories span{padding:5px 9px;border:1px solid var(--line);border-radius:999px;font-size:.75rem}

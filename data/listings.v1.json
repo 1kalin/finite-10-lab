@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "listings": [{
+    "id": "demo-agent-wall-001",
+    "slug": "example-research-agent",
+    "name": "Example Research Agent",
+    "summary": "An illustrative profile showing how evidence and destination details will appear.",
+    "description": "This is a complimentary demo entry, not a customer, endorsement, reservation, or usage claim.",
+    "owner": { "id": "agent-wall-demo", "displayName": "Agent Wall demo" },
+    "destination": { "url": "https://example.com/", "label": "View example destination", "lastCheckedAt": "2026-08-25T00:00:00Z" },
+    "categories": ["research", "productivity"],
+    "verification": { "state": "unverified", "evidence": [], "checkedAt": null },
+    "status": "published",
+    "visibility": "public",
+    "disclosure": "Complimentary illustrative demo entry",
+    "createdAt": "2026-08-25T00:00:00Z",
+    "updatedAt": "2026-08-25T00:00:00Z",
+    "editHistory": [{ "at": "2026-08-25T00:00:00Z", "actor": "system:fixture", "summary": "Created version 1 demo fixture" }]
+  }]
+}
